@@ -30,9 +30,10 @@ func findSubstr(input string) int {
 	// r := strings.NewReader(input)
 
 	var start, end int;
+	let := 13
 
-	for start = 0; start < len(input) - 3; start++ {
-		end = start + 3
+	for start = 0; start < len(input) - let; start++ {
+		end = start + let
 		sub_s := input[start:end+1]
 
 		if match(sub_s) {
